@@ -1,0 +1,1054 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wrap {
+    margin: 0 auto;
+    max-width: 1000px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@media (max-width:767px) {
+    .wrap {
+        max-width: 768px;
+    }
+}
+
+/* --------header--------- */
+
+.header {
+    position: relative;
+    background: url(../img/header_desktop.png);
+    background-position: top;
+    height: 420px;
+}
+
+/* ----------navbar----------- */
+
+.banner {
+    background: rgba(0, 0, 0, 0.5);
+    height: 56px;
+}
+
+.logo {
+    float: left;
+    background-image: url(../img/logo_w\(null\).svg);
+    width: 120px;
+    height: 24px;
+    margin: 16px 0 16px 42px;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.menu {
+    float: right;
+}
+
+.menu li {
+    float: left;
+    padding-right: 25px;
+    padding-top: 18px;
+    padding-bottom: 17px;
+}
+
+.menu li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.menu li a:hover {
+    border-bottom: 2px solid white;
+}
+
+
+
+/*在PC上隱藏漢堡選單*/
+
+.showmenu {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .menu {
+        max-height: 0px;
+        overflow: hidden;
+        /*隱藏選單結束*/
+        transition: max-height 2.3s;
+        margin-top: 1px;
+        /*絕對定位疊在網頁上*/
+        position: absolute;
+        z-index: 100;
+        /*header 80px+1px boder 線條*/
+        top: 61px;
+        left: 0;
+        right: 0;
+        background: #0F222B;
+    }
+
+    .fa-bars {
+        font-size: 30px;
+        color: white;
+    }
+
+    .menu li {
+        float: none;
+        border-bottom: 1px solid #69CA62;
+        background-color: rgba(199, 38, 38, 0.089);
+        text-align: center
+    }
+
+    .menu li a {
+        transition: all 0.3s;
+    }
+
+    .menu li a:hover {
+        color: #fff;
+    }
+
+    .showmenu {
+        display: block;
+        float: right;
+        margin: 1em;
+    }
+
+    /*jQ點擊後動態在 body 加上 class */
+    .menu-show .menu {
+        max-height: 500px
+    }
+}
+
+/* ------------title-------------- */
+
+.title {
+    background: rgba(0, 0, 0, 0.35);
+    left: 20%;
+    right: 20%;
+    position: absolute;
+    top: 123px;
+    z-index: 10;
+    text-align: center;
+}
+
+.title h2 {
+    font-size: 50px;
+    padding-left: 22px;
+    padding-top: 20px;
+    color: white;
+}
+
+.title p {
+    font-size: 16px;
+    padding-top: 30px;
+    color: white;
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+@media(max-width:415px) {
+    .hide {
+        display: block
+    }
+
+    .title h2 {
+
+        font-size: 25px;
+        padding-left: 22px;
+        padding-top: 20px;
+        color: white;
+    }
+
+}
+
+/* @media (max-width: 320px) {
+
+    .hide {
+        display: block
+    }
+
+    .title h2 {
+
+        font-size: 25px;
+        padding-left: 22px;
+        padding-top: 20px;
+        color: white;
+    }
+
+} */
+
+
+
+
+
+
+/* ---------------content----------------- */
+
+.content {
+    background-color: #efe9e7;
+}
+
+.cnt_Banner {
+    max-width: 464px;
+    margin: 0 auto 20px;
+}
+
+.cnt_text {
+    float: left;
+    height: 32px;
+    padding: 50px 10px 0;
+    text-align: center;
+}
+
+.cnt_text p {
+    font-size: 20px;
+    color: #3D1101;
+}
+
+.line1,
+.line2 {
+    float: left;
+    height: 82px;
+    width: 122px;
+    border-bottom: 1px solid #979797;
+}
+
+.cnt_list {
+    padding: 0 0 50px;
+}
+
+.cnt_list li {
+    position: relative;
+    float: left;
+    width: 27.5%;
+    margin: 37px 2.9166%;
+}
+
+.cnt_list h3 {
+    padding: 20px 10px 10px 10px;
+    text-align: center;
+    font-size: 18px;
+    color: #3D1101;
+}
+
+.cnt_list p {
+    font-size: 14px;
+    color: #3D1101;
+    padding-bottom: 40px;
+}
+
+.feature01,
+.feature03,
+.feature02 {
+    border-radius: 100px;
+    margin-left: 40px;
+}
+
+@media(max-width:767px) {
+
+    .line1,
+    .line2 {
+        float: right;
+        height: 82px;
+        width: 122px;
+    }
+
+    .line2 {
+        margin-top: -80px;
+        margin-right: 215px;
+    }
+
+    .cnt_text {
+        margin-left: 122px;
+    }
+
+    .cnt_list li {
+        width: 27.5%;
+    }
+
+    .feature01,
+    .feature02,
+    .feature03 {
+        margin-left: 10px;
+    }
+
+
+
+    .cnt_list h3 {
+        padding: 20px 10px 10px 40px;
+    }
+
+    .cnt_list p {
+        font-size: 16px;
+        text-align: center;
+        margin: 0 10px -60px 10px;
+        text-align: left;
+    }
+
+
+}
+
+@media(max-width:415px) {
+
+
+
+    .line1,
+    .line2 {
+        display: none;
+
+    }
+
+    .feature01,
+    .feature02,
+    .feature03 {
+        display: inline-block;
+        max-width: 90%;
+
+
+    }
+
+    .cnt_list h3 {
+        padding: 20px 0px 10px 0px;
+        font-size: 14px;
+
+        *span {
+            display: none;
+        }
+
+    }
+
+}
+
+@media(max-width:375px) {
+    .cnt_text {
+        margin-left: 102px;
+    }
+
+}
+
+
+
+/* --------------chef intro--------------- */
+
+.chef_intro {
+    background: #3D1101;
+}
+
+.chef_pic {
+    margin-left: 42px;
+    float: left;
+}
+
+.chef_intro h2 {
+    font-size: 20px;
+    color: #EFE9E7;
+    line-height: 32px;
+    display: inline-block;
+
+    margin-left: 4%;
+    margin-top: 10%;
+}
+
+
+
+.chef_text p {
+    font-size: 16px;
+    color: #EFE9E7;
+    margin-left: 55.5%;
+    margin-right: 5%;
+    margin-top: 3%;
+}
+
+@media(max-width:767px) {
+    .chef_pic {
+        margin-top: 50px;
+        margin-left: 1px;
+        max-width: 100%;
+        height: 460px;
+    }
+
+    .chef_intro h2 {
+        margin-left: 45px;
+        padding-top: 45px;
+    }
+
+    .chef_text p {
+        margin-top: 10px;
+        margin-right: 0;
+        padding-bottom: 30px;
+        line-height: 20px;
+    }
+}
+
+@media(max-width:415px) {
+
+
+    .chef_intro h2 {
+        margin-left: 80px;
+        margin-top: -80px;
+    }
+
+    .chef_text p {
+        margin-top: 10px;
+        margin-left: 19.5%;
+        margin-right: 11%;
+        line-height: 20px;
+    }
+}
+
+
+@media(max-width:320px) {
+    .chef_pic {
+        max-width: 100%;
+    }
+
+
+
+    .line1,
+    .line2 {
+        display: none;
+
+    }
+
+
+
+
+}
+
+/* @media (max-width:320px) {
+
+
+
+    .chef_intro h2 {
+        margin-left: 40px;
+        top: -30px;
+
+    }
+
+    .chef_text p {
+        text-align: justify;
+        margin-top: 10px;
+        margin-left: 40px;
+        margin-right: 11%;
+        line-height: 20px;
+        padding-bottom: 50px;
+    }
+
+
+} */
+
+/* -------------response------------------ */
+
+.response {
+    background: #efe9e7;
+}
+
+.response h2 {
+    position: absolute;
+    margin-top: 50px;
+    left: 50%;
+    margin-left: -70px;
+    font-size: 24px;
+    color: #3D1101;
+}
+
+.response_list li {
+    float: left;
+    width: 30%;
+    margin: 150px 1.625% 30px;
+}
+
+.response img {
+    border-radius: 100%;
+    float: left;
+}
+
+.response h3 {
+    font-size: 18px;
+    color: #3D1101;
+    padding: 21.5px 0 22px 80px;
+}
+
+.response p {
+    margin-left: 70px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.job_title {
+    text-align: right;
+}
+
+@media(max-width:415px) {
+    .response h2 {
+        padding-bottom: 40px;
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+
+    .response_list li {
+        width: 95%;
+        margin-bottom: 10px;
+        margin-top: 60px;
+    }
+
+    .response h3 {
+        font-size: 18px;
+        color: #3D1101;
+        padding: 21.5px 0 22px 130px;
+    }
+}
+
+/* --------------resvation------------------ */
+
+.reservation {
+    background: rgba(250, 250, 250, 0.70);
+    height: 500px;
+}
+
+.res_text {
+    left: 50%;
+}
+
+.res_text p {
+    font-size: 24px;
+    color: #3D1101;
+    text-align: center;
+}
+
+.reservation img {
+    float: left;
+    position: absolute;
+}
+
+.pe1,
+.pe2,
+.pe3,
+.pe4 {
+    width: 30%;
+    height: 25px;
+    position: absolute;
+    float: left;
+    right: 30px;
+}
+
+.per,
+.pho,
+.mailbox,
+.quantity {
+    float: right;
+    color: black;
+    position: absolute;
+    right: 500px;
+}
+
+.pe1 {
+    left: 50%;
+    margin-top: 30px;
+}
+
+.per {
+    left: 50%;
+    margin-top: 7px;
+}
+
+.pe2 {
+    left: 50%;
+    margin-top: 90px;
+}
+
+.pho {
+    left: 50%;
+    margin-top: 70px;
+}
+
+.pe3 {
+    left: 50%;
+    margin-top: 150px;
+}
+
+.mailbox {
+    left: 50%;
+    margin-top: 130px;
+}
+
+.pe4 {
+    left: 50%;
+    margin-top: 210px;
+}
+
+.quantity {
+    left: 50%;
+    margin-top: 185px;
+}
+
+.radiobox {
+    left: 50%;
+    margin-top: 250px;
+    position: absolute;
+}
+
+.radiobox p {
+    font-size: 16px;
+    color: #3D1101;
+    padding-bottom: 10px;
+}
+
+.button {
+    margin-top: 10px;
+    margin-left: 300px;
+}
+
+.cancelBtn,
+sendBtn {
+    position: absolute;
+}
+
+.sendBtn {
+    margin-left: 100px;
+}
+
+.cancel,
+.send {
+    width: 60px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.send {
+    background: #F56C23;
+    color: white;
+}
+
+.cancel {
+    background: grey;
+    color: white;
+}
+
+.send:hover,
+.cancel:hover {
+    background: turquoise;
+}
+
+@media(max-width:767px) {
+    .res_text p {
+        margin: 50px 0 30px 0;
+    }
+
+    .reservation img {
+        width: 363px;
+    }
+
+    .per,
+    .pho,
+    .mailbox,
+    .quantity {
+        white-space: nowrap;
+        left: 52%;
+    }
+
+    .pe1,
+    .pe2,
+    .pe3,
+    .pe4 {
+        width: 40%;
+        height: 25px;
+        position: absolute;
+        float: left;
+        left: 52%;
+    }
+
+    .radiobox {
+        left: 52%;
+    }
+
+    .cancelBtn {
+        left: 1%;
+    }
+
+    .sendBtn {
+        margin-left: -220px;
+    }
+}
+
+@media(max-width:415px) {
+    .reservation {
+        height: 900px;
+    }
+
+    .reservation img {
+        width: 100%;
+    }
+
+    .res_text p {
+        margin: 30px 0 30px 0;
+    }
+
+    .per {
+        margin-top: 380px;
+        left: 10%;
+        white-space: nowrap;
+    }
+
+    .pho {
+        margin-top: 440px;
+        left: 10%;
+        white-space: nowrap;
+    }
+
+    .mailbox {
+        margin-top: 500px;
+        left: 10%;
+        white-space: nowrap;
+    }
+
+    .quantity {
+        margin-top: 560px;
+        left: 10%;
+        white-space: nowrap;
+    }
+
+    .pe1,
+    .pe2,
+    .pe3,
+    .pe4 {
+        width: 80%;
+        height: 25px;
+        position: absolute;
+        float: left;
+        right: 40px;
+    }
+
+    .pe1 {
+        margin-top: 400px;
+        left: 10%;
+    }
+
+    .pe2 {
+        margin-top: 460px;
+        left: 10%;
+    }
+
+    .pe3 {
+        margin-top: 520px;
+        left: 10%;
+    }
+
+    .pe4 {
+        margin-top: 580px;
+        left: 10%;
+    }
+
+    .radiobox {
+        margin-top: 650px;
+        left: 10%;
+    }
+
+    .cancelBtn {
+        left: 1%;
+    }
+
+    .sendBtn {
+        margin-left: -220px;
+    }
+}
+
+/* -----------footer------------------- */
+
+.footer {
+    background: #efe9e7;
+    color: #3D1101;
+    padding-bottom: 200px;
+}
+
+.about {
+    float: left;
+    margin: 50px 21px 0 43px;
+    max-width: 30%;
+}
+
+.about h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.about p {
+    font-size: 16px;
+}
+
+.callus {
+    float: left;
+    margin-top: 50px;
+    max-width: 30%;
+}
+
+.callus h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.callus li {
+    font-size: 16px;
+}
+
+.socialus {
+    float: right;
+    margin-top: 50px;
+    max-width: 30%;
+}
+
+.logo2 {
+    float: left;
+    background-image: url(../img/logo_l@svg.svg);
+    width: 243px;
+    height: 48px;
+    margin: -10px 42px 0 30px;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.social_icon a {
+    float: right;
+    margin-right: 40px;
+    margin-top: 22px;
+    width: 31px;
+    height: 36px;
+    font-size: 42px;
+}
+
+.google {
+    color: #DB4437;
+}
+
+.fb {
+    color: #3A5795;
+}
+
+.tw {
+    color: #41ABE1;
+}
+
+.social_icon a:hover {
+    color: turquoise;
+    font-size: 50px;
+}
+
+@media(max-width:767px) {
+    .footer {
+        height: 200px;
+    }
+
+    .logo2 {
+        margin: -10px 22px 0 20px;
+        width: 245px;
+        background-size: 100%;
+    }
+
+    .about {
+        max-width: 30%;
+        margin-left: 0px;
+    }
+
+    .callus {
+        max-width: 30%;
+    }
+
+    .socialus {
+        max-width: 40%;
+    }
+
+    .logo2 {
+        float: left;
+        margin-right: 50px;
+        background-size: 80%;
+        text-indent: 121%;
+        white-space: nowrap;
+        overflow: hidden;
+        background-repeat: no-repeat;
+    }
+}
+
+@media(max-width:415px) {
+    .footer {
+        height: 200px;
+    }
+
+    .about {
+        float: none;
+        max-width: 90%;
+        padding-top: 20px;
+        margin-left: 25px;
+    }
+
+    .callus {
+        float: none;
+        max-width: 90%;
+        margin: 30px 0 30px 25px;
+        white-space: nowrap;
+    }
+
+    .socialus {
+        float: none;
+        max-width: 80%;
+    }
+
+    .social_icon a {
+        float: left;
+        width: 31px;
+        height: 36px;
+        font-size: 42px;
+    }
+
+    .google {
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+}
+
+/* ----------clearfix------------- */
+
+.clearfix {
+    clear: both;
+}
